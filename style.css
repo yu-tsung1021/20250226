@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    padding: 13px;
+    color: rgb(223, 230, 236);
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.skills, .projects {
+    display: flex;
+    gap: 20px;
+}
+
+.project-card {
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    background-color: rgba(131, 162, 255, 0.445);
+}
+
+a.button-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #407b92;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
