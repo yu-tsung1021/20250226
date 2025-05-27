@@ -8,7 +8,22 @@
 </head>
 
 <body>
-    <div style="background-color: #407b92; padding: 10px;">
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (this.target !== "_blank" && this.href) {
+                e.preventDefault();
+                document.body.classList.add('hr-animate');
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 600); // 與動畫時間一致
+            }
+        });
+    });
+});
+</script>
+    <div class="my-color">
     <h1>自我介紹</h1>
     <nav style="text-align: center  ">
         <a href="index.html">首頁</a>
@@ -17,17 +32,18 @@
         <a href="homework.html">作業</a>
     </nav>
     </div>
+    <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
     <section>
-        <h1>作業集</h1>
+        <h3>作業集</h3>
         <div class="projects">
             <div class="project-card">
-                <strong><a href="https://yu-tsung1021.github.io/20250226---/" style="color: #8a3333;">乘法表</a></strong>
+                <strong><a href="https://yu-tsung1021.github.io/20250226---/" >乘法表</a></strong>
                 <p>數字進行乘法1~9</p>
                 </a>
             </div>
             <div class="project-card">
-                <strong><a href="https://yu-tsung1021.github.io/0508-app/" style="color: #8a3333;">React  vite基礎開發網頁</a></strong>
-                <p>基礎網頁</p>
+                <strong><a href="https://yu-tsung1021.github.io/0508-app/" >React網頁</a></strong>
+                <p>調色盤計算機</p>
             </div>
         </div>
     </section>

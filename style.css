@@ -1,15 +1,25 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: hsl(5, 20%, 47%);
+    color: hsl(29, 17%, 76%);
 }
-
+.my-color{
+    background-color:hsl(18, 20%, 27%);
+    padding: 10px;
+}
 nav a {
     margin-right: 15px;
     padding: 13px;
-    color: rgb(223, 230, 236);
     text-decoration: none;
+    color: white;
 }
-
+h3 {
+    color: hsl(30, 20%, 90%);
+}
+h1 {
+    color: white;
+}
 nav {
     text-align: center;
 }
@@ -28,7 +38,12 @@ section {
     padding: 10px;
     border-radius: 8px;
     width: 200px;
-    background-color: rgba(131, 162, 255, 0.445);
+    background-color: hsl(28,20%, 71%);
+    color:rgb(87,65,65);
+}
+.project-card p,a{
+    transition: transform 0.3s ease;
+    color:rgb(87,65,65);
 }
 
 a.button-home {
@@ -39,4 +54,44 @@ a.button-home {
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+}
+.animated-hr {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    margin: 20px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animated-hr .dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background 0.3s;
+    opacity: 0;           
+    pointer-events: none; 
+    .animated-hr .dot {
+    display: none;
+}
+}   
+.animated-hr .line {
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s cubic-bezier(.77,0,.18,1);
+    z-index: 1;
+}
+body.hr-animate .animated-hr .line {
+    width: 0;
 }

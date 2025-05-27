@@ -8,7 +8,22 @@
 </head>
 
 <body>
-    <div style="background-color: #407b92; padding: 10px;">
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (this.target !== "_blank" && this.href) {
+                e.preventDefault();
+                document.body.classList.add('hr-animate');
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 600); // 與動畫時間一致
+            }
+        });
+    });
+});
+</script>
+    <div class="my-color">
     <h1>自我介紹</h1>
     <nav style="text-align: center  ">
         <a href="index.html">首頁</a>
@@ -17,6 +32,7 @@
         <a href="homework.html">作業</a>
     </nav>
     </div>
+    <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
         <section>
         <h3>學歷</h3>
         <ul>
