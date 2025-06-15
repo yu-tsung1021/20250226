@@ -8,11 +8,11 @@ body {
     background-color: hsl(18, 20%, 27%);
     padding: 2px 0;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    transform: none;
     box-sizing: border-box;
 }
 nav {
@@ -119,15 +119,13 @@ body.hr-animate .animated-hr .line {
     justify-content: flex-start; /* 靠左排列 */
     align-items: flex-start;
     min-height: 400px;
-    /* 新增左側間距，數值可自行調整 */
-    margin-left: 320px;
 }
 .profile-card {
   background: #ffffff;
   /* box-shadow: 0 8px 24px #e8ded2; */ /* 移除陰影 */
   border-radius: 12px;
   padding: 60px 40px 40px 40px; /* 放大卡片 */
-  margin-top: 40px;
+  margin-top: 10px;
   min-width: 300px; /* 放大卡片寬度 */
   text-align: center;
 }
@@ -167,7 +165,7 @@ body.hr-animate .animated-hr .line {
   align-items: center;
   justify-content: flex-start; /* 靠左對齊 */
   gap: 48px;                  /* 卡片與簡介間距 */
-  padding-left: 4vw;          /* 整體往右一點，可自行調整 */
+  padding-left: 250px;          /* 整體往右一點，可自行調整 */
 }
 .profile-intro {
   max-width: 700px;
@@ -175,7 +173,7 @@ body.hr-animate .animated-hr .line {
   color: #333;
   /* 讓簡介往上移動一點 */
   align-self: flex-start;
-  margin-top: -10px; /* 可自行調整數值 */
+  margin-top: -50px; /* 可自行調整數值 */
 }
 .profile-intro h1{
     font-size: 80px;
