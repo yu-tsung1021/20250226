@@ -8,8 +8,9 @@
 </head>
 
 <body>
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
+    // 原本的切換頁面動畫
     document.querySelectorAll('nav a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             if (this.target !== "_blank" && this.href) {
@@ -17,12 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.add('hr-animate');
                 setTimeout(() => {
                     window.location = this.href;
-                }, 600); // 與動畫時間一致
+                }, 500);
             }
         });
     });
+
+    // 新增內容淡入動畫
+    setTimeout(function() {
+        var pc = document.querySelector('.page-content');
+        if(pc) pc.classList.add('visible');
+    }, 50); // 100ms後淡入內容
 });
 </script>
+
     <div class="my-color">
     <h1>自我介紹</h1>
     <nav style="text-align: center  ">
@@ -33,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </nav>
     </div>
     <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
-        <section>
+<div class="page-content">
+    <section>
         <h3>學歷🏫</h3>
         <ul>
             <li>文元國小（2013 年 9 月 ～ 2019 年 6 月）</li>
@@ -68,5 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>電話: 0906-205-016</li>
         </ul>
     </section>
+</div>
 </body>
 </html>

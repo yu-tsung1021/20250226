@@ -153,3 +153,35 @@ body.hr-animate .animated-hr .line {
   width: 24px;
   margin: 0 8px;
 }
+.page-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.page-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 靠左對齊 */
+  gap: 48px;                  /* 卡片與簡介間距 */
+  padding-left: 4vw;          /* 整體往右一點，可自行調整 */
+}
+.profile-intro {
+  max-width: 700px;
+  padding: 32px 24px;
+  color: #333;
+  /* 讓簡介往上移動一點 */
+  align-self: flex-start;
+  margin-top: -10px; /* 可自行調整數值 */
+}
+.profile-intro h1{
+    font-size: 80px;
+    margin-bottom: 16px;
+    color: #dcdcdc; /* 標題顏色 */
+}
+.profile-intro p {
+  font-size: 24px;
+}
