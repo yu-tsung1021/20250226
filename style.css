@@ -125,7 +125,7 @@ body.hr-animate .animated-hr .line {
   /* box-shadow: 0 8px 24px #e8ded2; */ /* 移除陰影 */
   border-radius: 12px;
   padding: 60px 40px 40px 40px; /* 放大卡片 */
-  margin-top: 10px;
+  margin-top: -10px;
   min-width: 300px; /* 放大卡片寬度 */
   text-align: center;
 }
@@ -173,7 +173,7 @@ body.hr-animate .animated-hr .line {
   color: #333;
   /* 讓簡介往上移動一點 */
   align-self: flex-start;
-  margin-top: -50px; /* 可自行調整數值 */
+  margin-top: -70px; /* 可自行調整數值 */
 }
 .profile-intro h1{
     font-size: 80px;
