@@ -1,12 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
     background-color: hsl(5, 20%, 47%);
     color: hsl(29, 17%, 76%);
 }
-.my-color{
-    background-color:hsl(18, 20%, 27%);
-    padding: 10px;
+.my-color {
+    background-color: hsl(18, 20%, 27%);
+    padding: 2px 0;
+    margin: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+nav {
+    text-align: right;
+    padding-right: 40px;
 }
 nav a {
     margin-right: 15px;
@@ -19,9 +30,6 @@ h3 {
 }
 h1 {
     color: white;
-}
-nav {
-    text-align: center;
 }
 
 section {
@@ -94,4 +102,54 @@ a.button-home {
 }
 body.hr-animate .animated-hr .line {
     width: 0;
+}
+.profile-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #e8ded2 60%, #fff 100%);
+  z-index: 0;
+  border-radius: 0 0 0 0;
+}
+.profile-left {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* 靠左排列 */
+    align-items: flex-start;
+    min-height: 400px;
+    /* 新增左側間距，數值可自行調整 */
+    margin-left: 360px;
+}
+.profile-card {
+  background: #ffffff;
+  /* box-shadow: 0 8px 24px #e8ded2; */ /* 移除陰影 */
+  border-radius: 12px;
+  padding: 60px 40px 40px 40px; /* 放大卡片 */
+  margin-top: 40px;
+  min-width: 300px; /* 放大卡片寬度 */
+  text-align: center;
+}
+.profile-img {
+  width: 220px; /* 放大頭像 */
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  background: #ccc;
+}
+.profile-hr {
+  width: 50px;
+  border: 2px solid #407b92;
+  margin: 16px auto;
+}
+.profile-title {
+  letter-spacing: 0.2em;
+  color: #7b6f5a;
+  margin-bottom: 20px;
+}
+.profile-social a img {
+  width: 24px;
+  margin: 0 8px;
 }
