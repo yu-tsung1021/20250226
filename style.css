@@ -120,7 +120,7 @@ body.hr-animate .animated-hr .line {
     align-items: flex-start;
     min-height: 400px;
     /* 新增左側間距，數值可自行調整 */
-    margin-left: 360px;
+    margin-left: 320px;
 }
 .profile-card {
   background: #ffffff;
@@ -184,4 +184,27 @@ body.hr-animate .animated-hr .line {
 }
 .profile-intro p {
   font-size: 24px;
+}
+.order-item img {
+  width: 1100px;    /* 照片寬度，可依需求調整 */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.order-item{
+    text-align: center;
+}
+.order-item h3 {
+    text-align: left;      /* 標題靠左對齊 */
+    margin-left: 210px;     /* 左側間距，可自行調整 */
+    margin-top: 12px;      /* 與圖片的間距，可自行調整 */
+    margin-bottom: 6px;    /* 與內容的間距，可自行調整 */
+    color: #333; /* 標題顏色 */
+    font-size: 28px; /* 標題字體大小 */
+}
+.order-item p {
+    font-size: 18px;
 }
