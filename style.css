@@ -206,23 +206,78 @@ body.hr-animate .animated-hr .line {
 .order-item p {
     font-size: 18px;
 }
-@media (max-width: 600px) {
-  .main-content {
-    padding-top: 16px;
-    gap: 20px;
+/* 讓主要內容區塊最大寬度不超過螢幕 */
+.profile-card, .profile-intro, .order-item {
+  max-width: 98vw;
+  box-sizing: border-box;
+}
+
+/* 卡片寬度自適應，padding 用百分比 */
+.profile-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 8vw 4vw;
+  margin: 0 auto;
+}
+
+/* 頭像等比例縮放 */
+.profile-img {
+  width: 50vw;
+  max-width: 220px;
+  min-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ccc;
+}
+
+/* 讓 .profile-row 在手機自動直排，內容等比例縮小 */
+@media (max-width: 900px) {
+  .profile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-left: 0;
+    padding-right: 0;
   }
-  .profile-card, .profile-intro {
-    width: 98vw;
-    padding: 20px 4vw;
-  }
-  .profile-img {
-    width: 100px;
-    height: 100px;
+  .profile-intro {
+    margin-top: 0;
+    width: 100%;
+    max-width: 98vw;
+    padding: 6vw 4vw;
+    font-size: 1em;
   }
   .profile-intro h1 {
-    font-size: 1.4em;
+    font-size: 2em;
   }
   .profile-intro p {
     font-size: 1em;
   }
+}
+
+/* 點餐系統照片自動縮放不超出 */
+.order-item img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* .order-item h3 標題間距在手機自動調整 */
+@media (max-width: 900px) {
+  .order-item h3 {
+    margin-left: 0;
+    font-size: 1.2em;
+  }
+}
+
+/* 防止橫向滾動條 */
+body, html {
+  overflow-x: hidden;
 }
