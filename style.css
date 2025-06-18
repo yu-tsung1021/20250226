@@ -206,3 +206,32 @@ body.hr-animate .animated-hr .line {
 .order-item p {
     font-size: 18px;
 }
+@media (max-width: 768px) {
+  .profile-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .profile-card, .profile-intro {
+    width: 90vw;
+    min-width: unset;
+    max-width: 98vw;
+    margin: 0 auto;
+    padding: 24px 8px;
+  }
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .profile-bg {
+    width: 100vw;
+    height: 220px;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+  }
+}
