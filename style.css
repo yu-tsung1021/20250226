@@ -36,10 +36,22 @@ h1 {
 }
 
 section {
-    margin-bottom: 30px;
-    margin-left: 550px;
+  width: 400px;         /* 你想要的固定寬度 */
+  margin: 0 auto;       /* 置中 */
+  text-align: center;   /* 內容置中 */
 }
-
+section h3 {
+  text-align: left;      /* 讓 h3 靠左對齊 */
+  margin-left: 0;        /* 左側無間距 */
+  margin-top: 24px;      /* 與上方間距，可依需求調整 */
+  margin-bottom: 16px;   /* 與下方間距，可依需求調整 */
+}
+section ol, section ul {
+  text-align: left;           /* 讓清單內容靠左 */
+  margin-left: 0;             /* 左側無多餘間距 */
+  padding-left: 2em;          /* 保留預設縮排 */
+  list-style-position: outside; /* 編號在外側 */
+}
 .skills, .projects {
     display: flex;
     gap: 20px;
@@ -256,4 +268,7 @@ body.hr-animate .animated-hr .line {
 /* 防止橫向滾動條 */
 body, html {
   overflow-x: hidden;
+}
+textarea {
+  resize: none;
 }
