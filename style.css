@@ -206,34 +206,6 @@ body.hr-animate .animated-hr .line {
 .order-item p {
     font-size: 18px;
 }
-/* 讓主要內容區塊最大寬度不超過螢幕 */
-.profile-card, .profile-intro, .order-item {
-  max-width: 98vw;
-  box-sizing: border-box;
-}
-
-/* 卡片寬度自適應，padding 用百分比 */
-.profile-card {
-  width: 100%;
-  max-width: 400px;
-  padding: 8vw 4vw;
-  margin: 0 auto;
-}
-
-/* 頭像等比例縮放 */
-.profile-img {
-  width: 50vw;
-  max-width: 220px;
-  min-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px auto;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #ccc;
-}
-
-/* 讓 .profile-row 在手機自動直排，內容等比例縮小 */
 @media (max-width: 900px) {
   .profile-row {
     flex-direction: column;
@@ -242,35 +214,35 @@ body.hr-animate .animated-hr .line {
     padding-left: 0;
     padding-right: 0;
   }
-  .profile-intro {
-    margin-top: 0;
-    width: 100%;
+  .profile-card, .profile-intro, .order-item {
+    width: 98vw;
+    min-width: unset;
     max-width: 98vw;
-    padding: 6vw 4vw;
-    font-size: 1em;
+    box-sizing: border-box;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
-  .profile-intro h1 {
-    font-size: 2em;
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    min-width: 60px;
   }
-  .profile-intro p {
-    font-size: 1em;
+  .profile-bg {
+    width: 100vw;
+    height: 220px;
+    left: 0;
+    top: 0;
+    border-radius: 0;
   }
-}
-
-/* 點餐系統照片自動縮放不超出 */
-.order-item img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-/* .order-item h3 標題間距在手機自動調整 */
-@media (max-width: 900px) {
+  .order-system-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .order-item img {
+    max-width: 120px;
+  }
   .order-item h3 {
     margin-left: 0;
     font-size: 1.2em;
