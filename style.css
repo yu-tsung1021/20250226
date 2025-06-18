@@ -1,11 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: hsl(5, 20%, 47%);
-    color: hsl(29, 17%, 76%);
+    font-family: Arial, sans-serif; /* 設定全站字型 */
+    margin: 0; /* 移除預設外距 */
+    background-color: hsl(5, 20%, 47%); /* 主背景色 */
+    color: hsl(29, 17%, 76%); /* 主文字顏色 */
 }
+
+/* 導覽列與主題色區塊 */
 .my-color {
-    background-color: hsl(18, 20%, 27%);
+    background-color: hsl(18, 20%, 27%); /* 導覽列背景色 */
     padding: 2px 0;
     margin: 0;
     width: 100%;
@@ -16,47 +18,53 @@ body {
     box-sizing: border-box;
 }
 nav {
-    text-align: right;
-    padding-right: 40px;
+    text-align: right; /* 導覽列靠右 */
+    padding-right: 40px; /* 右側間距 */
 }
 nav a {
-    margin-right: 15px;
+    margin-right: 15px; /* 連結間距 */
     padding: 13px;
-    text-decoration: none;
+    text-decoration: none; /* 移除底線 */
     color: white;
 }
+
+/* 標題顏色設定 */
 h3 {
     color: hsl(30, 20%, 90%);
 }
 .my-color h1 {
-     margin-left: 30px;
+     margin-left: 30px; /* 首頁大標題左側間距 */
 }
 h1 {
     color: white;
 }
 
+/* ====== 內容區塊與清單 ====== */
 section {
-  width: 400px;         /* 你想要的固定寬度 */
-  margin: 0 auto;       /* 置中 */
-  text-align: center;   /* 內容置中 */
+  width: 400px;         /* 固定寬度，置中 */
+  margin: 0 auto;
+  text-align: center;
 }
 section h3 {
-  text-align: left;      /* 讓 h3 靠左對齊 */
-  margin-left: 0;        /* 左側無間距 */
-  margin-top: 24px;      /* 與上方間距，可依需求調整 */
-  margin-bottom: 16px;   /* 與下方間距，可依需求調整 */
+  text-align: left;      /* h3 靠左 */
+  margin-left: 0;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 section ol, section ul {
-  text-align: left;           /* 讓清單內容靠左 */
-  margin-left: 0;             /* 左側無多餘間距 */
-  padding-left: 2em;          /* 保留預設縮排 */
+  text-align: left;           /* 清單靠左 */
+  margin-left: 0;
+  padding-left: 2em;          /* 保留縮排 */
   list-style-position: outside; /* 編號在外側 */
 }
+
+/* 技能與作業卡片橫向排列 */
 .skills, .projects {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* 卡片間距 */
 }
 
+/* ====== 卡片樣式 ====== */
 .project-card {
     border: 2px solid #000000;
     padding: 10px;
@@ -66,10 +74,11 @@ section ol, section ul {
     color:rgb(87,65,65);
 }
 .project-card p,a{
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* 滑鼠移入動畫 */
     color:rgb(87,65,65);
 }
 
+/* 首頁點餐系統介紹按鈕 */
 a.button-home {
     display: inline-block;
     margin-bottom: 20px;
@@ -79,6 +88,8 @@ a.button-home {
     border-radius: 5px;
     text-decoration: none;
 }
+
+/* ====== 分頁切換動畫（橫線） ====== */
 .animated-hr {
     position: relative;
     width: 100%;
@@ -98,12 +109,10 @@ a.button-home {
     left: 50%;
     transform: translateX(-50%);
     transition: background 0.3s;
-    opacity: 0;           
+    opacity: 0;           /* 預設隱藏 */
     pointer-events: none; 
-    .animated-hr .dot {
-    display: none;
+    /* .animated-hr .dot { display: none; } 這行為誤植可忽略 */
 }
-}   
 .animated-hr .line {
     height: 2px;
     background: #fff;
@@ -117,8 +126,10 @@ a.button-home {
     z-index: 1;
 }
 body.hr-animate .animated-hr .line {
-    width: 0;
+    width: 0; /* 切換頁面時動畫收合 */
 }
+
+/* ====== 首頁卡片與簡介排版 ====== */
 .profile-bg {
   position: absolute;
   left: 0;
@@ -138,7 +149,7 @@ body.hr-animate .animated-hr .line {
 }
 .profile-card {
   background: #ffffff;
-  /* box-shadow: 0 8px 24px #e8ded2; */ /* 移除陰影 */
+  /* box-shadow: 0 8px 24px #e8ded2; */ /* 陰影已移除 */
   border-radius: 12px;
   padding: 60px 40px 40px 40px; /* 放大卡片 */
   margin-top: -10px;
@@ -167,6 +178,8 @@ body.hr-animate .animated-hr .line {
   width: 24px;
   margin: 0 8px;
 }
+
+/* ====== 內容淡入動畫 ====== */
 .page-content {
     opacity: 0;
     transform: translateY(30px);
@@ -176,20 +189,21 @@ body.hr-animate .animated-hr .line {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* 首頁左右排版 */
 .profile-row {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* 靠左對齊 */
   gap: 48px;                  /* 卡片與簡介間距 */
-  padding-left: 250px;          /* 整體往右一點，可自行調整 */
+  padding-left: 250px;        /* 整體往右一點 */
 }
 .profile-intro {
   max-width: 700px;
   padding: 32px 24px;
   color: #333;
-  /* 讓簡介往上移動一點 */
   align-self: flex-start;
-  margin-top: -70px; /* 可自行調整數值 */
+  margin-top: -70px; /* 可調整簡介上移 */
 }
 .profile-intro h1{
     font-size: 80px;
@@ -199,6 +213,8 @@ body.hr-animate .animated-hr .line {
 .profile-intro p {
   font-size: 24px;
 }
+
+/* ====== 研究/點餐系統介紹區塊 ====== */
 .order-item img {
   width: 1100px;    /* 照片寬度，可依需求調整 */
   height: auto;
@@ -213,15 +229,17 @@ body.hr-animate .animated-hr .line {
 }
 .order-item h3 {
     text-align: left;      /* 標題靠左對齊 */
-    margin-left: 210px;     /* 左側間距，可自行調整 */
-    margin-top: 12px;      /* 與圖片的間距，可自行調整 */
-    margin-bottom: 6px;    /* 與內容的間距，可自行調整 */
-    color: #333; /* 標題顏色 */
-    font-size: 28px; /* 標題字體大小 */
+    margin-left: 210px;    /* 左側間距，可調整 */
+    margin-top: 12px;      /* 與圖片間距 */
+    margin-bottom: 6px;    /* 與內容間距 */
+    color: #333;
+    font-size: 28px;
 }
 .order-item p {
     font-size: 18px;
 }
+
+/* ====== 響應式設計（手機版） ====== */
 @media (max-width: 900px) {
   .profile-row {
     flex-direction: column;
@@ -269,6 +287,9 @@ body.hr-animate .animated-hr .line {
 body, html {
   overflow-x: hidden;
 }
+
+/* 表單 textarea 禁止拉伸 */
 textarea {
   resize: none;
 }
+/* ====== END ====== */

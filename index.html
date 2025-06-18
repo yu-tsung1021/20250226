@@ -6,9 +6,11 @@
     <title>我的自我介紹</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <script>
+// 分頁切換動畫與內容淡入動畫
+// 點擊導覽列連結時，先觸發動畫再跳轉
+// 頁面載入時，內容區塊淡入顯示
 document.addEventListener('DOMContentLoaded', function() {
     // 原本的切換頁面動畫
     document.querySelectorAll('nav a').forEach(function(link) {
@@ -30,22 +32,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 50); // 100ms後淡入內容
 });
 </script>
-
     <div class="my-color">
     <h1 >我的自我介紹網站</h1>
     <nav style="text-align: center  ">
+        <!-- 導覽列，連結到各分頁 -->
         <a href="index.html">首頁🏠</a>
         <a href="about.html">關於我👨‍🎓</a>
-        <a href="research.html">研究🧐</a>
+        <a href="research.html">研究🧠</a>
         <a href="homework.html">作業📖</a>
         <a href="call.html">聯絡我📞</a>
     </nav>
     </div>
     <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
-
 <div class="page-content">  
   <div class="profile-row">
-    <!-- 左半部卡片 -->
+    <!-- 左半部個人卡片 -->
     <div class="profile-left">
       <div class="profile-card">
         <img src="img/my.jpg" alt="個人封面" class="profile-img">
@@ -54,22 +55,22 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="profile-title">學生</p>
         <hr>
         <div class="profile-social">
+          <!-- 社群連結 -->
           <a href="https://www.facebook.com/lu.you.zong.928406/?locale=zh_TW"><img src="img/FB.png" alt="FB"></a>
           <a href="https://www.instagram.com/yu_tsung_10/"><img src="img/IG.png" alt="IG"></a>
         </div>
       </div>
     </div>
-    <!-- 右邊簡介 -->
+    <!-- 右半部自我簡介 -->
     <div class="profile-intro">
       <h1>Hello!</h1>
       <p>
         大家好，這是我的自我介紹網站<br>
-        我是目前就讀南臺科技大學資訊工程系學生<br>
+        我是目前就讀南台科技大學資訊工程系學生<br>
         熱愛享受美食跟打羽球，喜歡學習新技術和挑戰自我。
       </p>
     </div>
   </div>
 </div>
-...
 </body>
 </html>
