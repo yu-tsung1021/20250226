@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的自我介紹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 原本的切換頁面動畫
+    document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (this.target !== "_blank" && this.href) {
+                e.preventDefault();
+                document.body.classList.add('hr-animate');
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 500);
+            }
+        });
+    });
+
+    // 新增內容淡入動畫
+    setTimeout(function() {
+        var pc = document.querySelector('.page-content');
+        if(pc) pc.classList.add('visible');
+    }, 50); // 100ms後淡入內容
+});
+</script>
+
+    <div class="my-color">
+    <h1>我的自我介紹網站</h1>
+    <nav style="text-align: center">
+        <a href="index.html">首頁🏠</a>
+        <a href="about.html">關於我👨‍🎓</a>
+        <a href="research.html">研究🧐</a>
+        <a href="homework.html">作業📖</a>
+        <a href="call.html">聯絡我📞</a>
+    </nav>
+    </div>
+    <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
+<div class="page-content">
+    <section>
+        <h3>聯絡我📞</h3>
+        <p>如果您有任何問題或建議，歡迎透過以下方式聯絡我：</p>
+    </section>
+    <form id="contactForm" action="https://formsubmit.co/qwerty0906205016@gmail.com" method="POST" style="max-width:400px;margin:auto;">
+      <label>
+        匿名
+        <input type="checkbox" id="anonymous">
+      </label><br>
+      <label for="email">您的 Email：</label>
+      <input type="email" id="email" name="email" placeholder="若匿名可不填" style="width:100%;">
+      <br><br>
+      <label for="subject">主旨：</label>
+      <input type="text" name="subject" required style="width:100%;">
+      <br><br>
+      <label for="message">內容：</label>
+      <textarea name="message" rows="5" required style="width:100%;"></textarea>
+      <br><br>
+      <button type="submit">發送 Email</button>
+    </form>
+    <div id="successMsg" style="display:none;text-align:center;color:rgb(13, 17, 13);font-weight:bold;margin-top:20px;">
+      發送成功！
+    </div>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = this;
+      var emailInput = document.getElementById('email');
+      var anonymous = document.getElementById('anonymous').checked;
+      if(anonymous || !emailInput.value){
+        emailInput.value = '匿名';
+      }
+      var formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if(response.ok){
+          document.getElementById('successMsg').style.display = 'block';
+          form.reset();
+        }else{
+          alert('發送失敗，請稍後再試。');
+        }
+      }).catch(() => {
+        alert('發送失敗，請檢查網路連線。');
+      });
+    });
+    </script>
+</div>

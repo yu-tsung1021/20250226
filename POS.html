@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介紹-研究</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 原本的切換頁面動畫
+    document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (this.target !== "_blank" && this.href) {
+                e.preventDefault();
+                document.body.classList.add('hr-animate');
+                setTimeout(() => {
+                    window.location = this.href;
+                }, 500);
+            }
+        });
+    });
+
+    // 新增內容淡入動畫
+    setTimeout(function() {
+        var pc = document.querySelector('.page-content');
+        if(pc) pc.classList.add('visible');
+    }, 50); 
+});
+</script>
+    <div class="my-color">
+    <h1>我的自我介紹網站</h1>
+    <nav style="text-align: center  ">
+        <a href="index.html">首頁🏠</a>
+        <a href="about.html">關於我👨‍🎓</a>
+        <a href="research.html">研究🧐</a>
+        <a href="homework.html">作業📖</a>
+        <a href="call.html">聯絡我📞</a>
+    </nav>
+    </div>
+    <div class="animated-hr"><span class="dot"></span><span class="line"></span></div>
+<div class="page-content">
+    <div class="order-item">
+  <h1>點餐系統與後台系統開發</h1>
+  <p>本專案是由flask後端資料庫搭配前端的html,css,js製作<br>目的是做出使用方法簡單,且老闆可簡單上手的線上點餐服務</p>
+    </div>
+  <div class="order-system-gallery">
+    <div class="order-item">
+      <h3>老闆頁面</h3>
+      <p>在登入預設的老闆帳密後老闆可以看到初始的老闆頁面,老闆可以簡單的看到各式的按鈕</p>
+      <img src="img/pic-1.png" alt="老闆頁面">
+    </div>
+    <div class="order-item">
+      <h3>註冊員工頁面</h3>
+      <p>在註冊員工後該員工帳密生效,當然老闆也有最大的權限開除員工,把員工帳號註銷掉</p>
+      <img src="img/pic-3.png" alt="註冊員工頁面">
+      <img src="img/pic-2.png" alt="註冊員工頁面">
+    </div>
+    <div class="order-item">
+      <h3>設定菜單頁面</h3>
+      <p>老闆可以新增分類並在分類下新增菜品,也可以刪除分類以及刪除商品<br>(還包括了餐點細項也可以設定喔)</p>
+      <img src="img/pic-4.png" alt="新增分類">
+      <img src="img/pic-5.png" alt="新增菜品">     
+      <img src="img/pic-6.png" alt="刪除分類">
+      <img src="img/pic-7.png" alt="刪除菜品">
+    </div>
+    <div class="order-item">
+      <h3>更改預設帳密</h3>
+      <p>老闆也可以更改預設的密碼喔改成自己的密碼</p>
+      <img src="img/pic-9.png" alt="更改密碼">
+    </div>
+    <div class="order-item">
+      <h3>顧客菜單頁面</h3>
+      <p>在不使用左上登入工作人員後台的情況下,顧客可以看到老闆設定好的菜單,也可以按下上面的橫向目錄自動傳送到想要的分類去喔!<br>(也可以勾選老闆提供的細項或自己添加備註喔)</p>
+      <img src="img/pic-8.png" alt="菜單頁面">
+      <img src="img/pic-10.png" alt="細項頁面">
+    </div>
+    <div class="order-item">
+      <h3>送出訂單</h3>
+      <p>在確認外帶或桌號後,可以點擊購物車進行最後的確認並送出<br>(必須要選擇外帶或桌號後才可送出訂單,送出訂單十秒後會刷新回顧客頁面)</p>
+      <img src="img/pic-11.png" alt="桌號頁面">
+      <img src="img/pic-12.png" alt="購物車頁面">
+      <img src="img/pic-13.png" alt="送出訂單">
+    </div>
+    <div class="order-item">
+      <h3>員工頁面</h3>
+      <p>在使用老闆註冊的員工帳密登入後,可以進到該頁面<br>可以結帳跟出餐勾選<br>結帳按鈕按下後會產生明細並將帳單傳輸給老闆,結帳完成後結帳按鈕消失<br>在確認商品都出餐勾選後結帳按鈕也消失將會刪除此訂單</p>
+      <img src="img/pic-14.png" alt="員工頁面">
+      <img src="img/pic-15.png" alt="結帳明細">
+      <img src="img/pic-16.png" alt="出餐勾選">
+    </div>
+    <div class="order-item">
+      <h3>結帳帳單與下載帳單</h3>
+      <p>按下結帳完成後會透過後端傳輸明細到帳單做資料庫紀錄<br>會比對時間進行月份統整帳單可供老闆下載成excel</p>
+      <img src="img/pic-17.png" alt="帳單頁面">
+      <img src="img/pic-18.png" alt="Excel">
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
